@@ -1,6 +1,4 @@
 //Q. Given an Employee class having properties ( Id, Name, Salary, Department). Sort the Employee list on the basis or salary  
-package JavaInterviewQuestions;
-
 import java.util.Comparator;
 import java.util.List;
 import java.util.Collections;
