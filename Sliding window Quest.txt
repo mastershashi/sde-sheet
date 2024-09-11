@@ -1,0 +1,140 @@
+Easy (30%)
+Maximum of All Subarrays of Size K
+
+Problem: Given an array and an integer K, find the maximum value in each subarray of size K.
+Example: arr = [1, 3, -1, -3, 5, 3, 6, 7], K = 3
+
+Minimum of All Subarrays of Size K
+
+Problem: Given an array and an integer K, find the minimum value in each subarray of size K.
+Example: arr = [2, 1, 5, 7, 3, 6, 4], K = 3
+Count Occurrences of Anagram
+
+Problem: Given two strings, s1 and s2, find the number of occurrences of an anagram of s1 in s2.
+Example: s1 = "ab", s2 = "abab"
+
+Longest Substring with K Distinct Characters
+
+Problem: Given a string and an integer K, find the length of the longest substring with exactly K distinct characters.
+Example: s = "araaci", K = 2
+
+Check Inclusions
+
+Problem: Given two strings, s1 and s2, check if s1 is a permutation of s2’s substring.
+Example: s1 = "ab", s2 = "eidbaooo"
+
+Medium (30%)
+Longest Substring Without Repeating Characters
+
+Problem: Given a string, find the length of the longest substring without repeating characters.
+Example: s = "abcabcbb"
+
+Longest Substring with At Most Two Distinct Characters
+
+Problem: Given a string, find the length of the longest substring that contains at most two distinct characters.
+Example: s = "eceba"
+
+Sliding Window Maximum (Deque)
+
+Problem: Given an array and an integer K, find the maximum value in each subarray of size K using a deque.
+Example: arr = [1, 3, -1, -3, 5, 3, 6, 7], K = 3
+Find All Anagrams in a String
+
+Problem: Given two strings s and p, find all the start indices of p’s anagrams in s.
+Example: s = "cbaebabacd", p = "abc"
+
+Longest Repeating Character Replacement
+
+Problem: Given a string, find the length of the longest substring that can be obtained by replacing at most K characters with any other character.
+Example: s = "AABABBA", K = 1
+
+Hard (40%)
+Longest Substring with At Most K Distinct Characters
+
+Problem: Given a string and an integer K, find the length of the longest substring with at most K distinct characters.
+Example: s = "eceba", K = 2
+
+Longest Subarray with Sum Divisible by K
+
+Problem: Given an array and an integer K, find the length of the longest subarray whose sum is divisible by K.
+Example: arr = [4, 5, 0, -2, -3, 1], K = 5
+Minimum Window Substring
+
+Problem: Given two strings s and t, find the minimum window in s that contains all characters of t.
+Example: s = "ADOBECODEBANC", t = "ABC"
+Count of Subarrays with Product Less Than K
+
+Problem: Given an array and an integer K, find the number of contiguous subarrays where the product of all elements is less than K.
+Example: arr = [10, 5, 2, 6], K = 100
+Substring with Concatenation of All Words
+
+Problem: Given a string s and a list of words, find all starting indices of substring(s) in s which is a concatenation of all the words in the list exactly once and without any intervening characters.
+Example: s = "barfoothefoobarman", words = ["foo","bar"]
+
+
+
+Easy (30%)
+Longest Substring Without Repeating Characters
+
+Problem: Given a string, find the length of the longest substring without repeating characters.
+Example: s = "abcabcbb"
+Longest Substring with At Most K Distinct Characters
+
+Problem: Given a string and an integer K, find the length of the longest substring with at most K distinct characters.
+Example: s = "araaci", K = 2
+Smallest Subarray with a Sum Greater than or Equal to K
+
+Problem: Given an array and an integer K, find the length of the smallest contiguous subarray whose sum is greater than or equal to K.
+Example: arr = [2, 3, 1, 2, 4, 3], K = 7
+Find All Anagrams in a String
+
+Problem: Given two strings s and p, find all the start indices of p’s anagrams in s.
+Example: s = "cbaebabacd", p = "abc"
+Longest Subarray with Sum Exactly K
+
+Problem: Given an array and an integer K, find the length of the longest contiguous subarray whose sum is exactly K.
+Example: arr = [1, 2, 3, -2, 5], K = 8
+Medium (30%)
+Minimum Window Substring
+
+Problem: Given two strings s and t, find the minimum window in s that contains all characters of t.
+Example: s = "ADOBECODEBANC", t = "ABC"
+Count of Subarrays with Product Less Than K
+
+Problem: Given an array and an integer K, find the number of contiguous subarrays where the product of all elements is less than K.
+Example: arr = [10, 5, 2, 6], K = 100
+Longest Substring with At Most Two Distinct Characters
+
+Problem: Given a string, find the length of the longest substring that contains at most two distinct characters.
+Example: s = "eceba"
+Maximum Sum of Subarray with Size Greater Than or Equal to K
+
+Problem: Given an array and an integer K, find the maximum sum of any subarray with size greater than or equal to K.
+Example: arr = [1, 2, 3, 4, 5], K = 3
+Subarray with Distinct Elements
+
+Problem: Given an array, find the length of the longest subarray that contains all distinct elements.
+Example: arr = [1, 2, 3, 4, 2, 5]
+Hard (40%)
+Longest Substring with At Most K Distinct Characters
+
+Problem: Given a string and an integer K, find the length of the longest substring with at most K distinct characters.
+Example: s = "eceba", K = 2
+Longest Subarray with Sum Divisible by K
+
+Problem: Given an array and an integer K, find the length of the longest subarray whose sum is divisible by K.
+Example: arr = [4, 5, 0, -2, -3, 1], K = 5
+Longest Substring with No More than K Repeating Characters
+
+Problem: Given a string and an integer K, find the length of the longest substring where no character repeats more than K times.
+Example: s = "aaabbcc", K = 2
+Minimum Size Subarray Sum
+
+Problem: Given an array and an integer K, find the length of the smallest contiguous subarray whose sum is at least K.
+Example: arr = [2, 3, 1, 2, 4, 3], K = 7
+Substring with Concatenation of All Words
+
+Problem: Given a string s and a list of words, find all starting indices of substring(s) in s which is a concatenation of all the words in the list exactly once and without any intervening characters.
+Example: s = "barfoothefoobarman", words = ["foo","bar"]
+
+
