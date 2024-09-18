@@ -1,0 +1,45 @@
+Here’s a list of 14 dynamic programming questions based on grid problems:
+
+Unique Paths
+
+Given a m x n grid, find the number of unique paths from the top-left corner to the bottom-right corner, moving only down or right.
+Minimum Path Sum
+
+Given a grid of non-negative integers, find a path from the top-left to the bottom-right that minimizes the sum of the numbers along the path.
+Maximal Square
+
+Given a 2D binary grid, find the largest square containing only 1s and return its area.
+Word Search II
+
+Given a board of characters and a list of words, find all words in the board using dynamic programming to optimize the search.
+Longest Increasing Path in a Matrix
+
+Given a matrix of integers, find the length of the longest increasing path.
+Unique Paths II
+
+Similar to the Unique Paths problem, but with obstacles represented by 1s. Return the number of unique paths to the bottom-right corner.
+Count Squares
+
+Given a 2D matrix filled with 0s and 1s, count the number of square submatrices with all 1s.
+Minimum Falling Path Sum
+
+Given a square array of integers, find the minimum sum of a falling path from the top to the bottom.
+Maximal Rectangle
+
+Given a 2D binary matrix filled with 0s and 1s, find the largest rectangle containing only 1s and return its area.
+Path with Minimum Effort
+
+Given a 2D array of heights, find a path from the top-left to the bottom-right that minimizes the maximum height difference along the path.
+Cherry Pickup
+
+In a grid, you and your friend start at the top-left corner and want to collect as many cherries as possible by moving to the bottom-right corner. Return the maximum number of cherries you can collect.
+Longest Common Subsequence
+
+Given two strings, find the length of their longest common subsequence using a grid to store intermediate results.
+Edit Distance
+
+Given two strings, find the minimum number of operations required to convert one string into the other using a grid to keep track of edit distances.
+Minimum Cost to Move Chips to The Same Position
+
+Given the positions of chips on a line, find the minimum cost to move all chips to the same position, treating it like a grid where movement cost is defined.
+These problems cover a wide range of applications for dynamic programming on grids and can help strengthen your understanding of the topic.

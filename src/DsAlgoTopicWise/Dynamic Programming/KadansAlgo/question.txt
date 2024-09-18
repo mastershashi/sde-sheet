@@ -1,0 +1,21 @@
+
+Here are six dynamic programming questions based on Kadane's Algorithm:
+
+Maximum Subarray Sum
+
+Given an integer array, find the contiguous subarray with the maximum sum and return that sum.
+Maximum Product Subarray
+
+Find the contiguous subarray within a one-dimensional array of numbers which has the largest product. Return the maximum product.
+Maximum Sum Circular Subarray
+
+Given a circular array, find the maximum sum of a contiguous subarray. This may involve wrapping around to the start of the array.
+Maximum Sum of Non-Adjacent Elements
+
+Given an array, find the maximum sum of non-adjacent elements. This problem can be solved using a variation of Kadane’s algorithm.
+Maximum Subarray Length with Given Sum
+
+Given an array and a target sum, find the length of the longest contiguous subarray that sums to the target sum.
+Find All Subarrays with Maximum Sum
+
+Given an integer array, return all contiguous subarrays that have the maximum sum, not just the sum itself.

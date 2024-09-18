@@ -1,0 +1,49 @@
+
+Here are 15 dynamic programming questions based on the Longest Common Subsequence (LCS) concept:
+
+Longest Common Subsequence
+
+Given two strings, find the length of their longest common subsequence.
+Print Longest Common Subsequence
+
+Given two strings, not only find the length of the longest common subsequence but also print the subsequence itself.
+Longest Repeating Subsequence
+
+Given a string, find the length of the longest subsequence that can be formed by repeating some of its characters.
+Minimum Deletions to Make Strings Equal
+
+Given two strings, find the minimum number of deletions required to make them equal using the concept of LCS.
+Minimum Insertions to Make String Palindrome
+
+Given a string, find the minimum number of insertions needed to make it a palindrome using LCS.
+Longest Common Substring
+
+Find the length of the longest substring that appears in both given strings.
+Longest Common Subsequence with K Distinct Characters
+
+Given two strings, find the length of their longest common subsequence that contains at most K distinct characters.
+Wild Card Matching
+
+Implement wildcard matching using LCS, where ? matches any single character and * matches any sequence of characters.
+Count Distinct Subsequences
+
+Given two strings, count the number of distinct subsequences of one string that equal the other string.
+Longest Palindromic Subsequence
+
+Given a string, find the length of the longest palindromic subsequence using LCS.
+Edit Distance
+
+Calculate the minimum number of operations required to convert one string into another using LCS to derive the edit distance.
+Longest Common Subsequence with Cost
+
+Given two strings with associated costs for each character, find the longest common subsequence while minimizing the total cost.
+Maximum Product of Lengths of LCS
+
+Given two arrays, find the maximum product of lengths of two LCS that can be formed with different pairs of arrays.
+Longest Common Subsequence of Multiple Strings
+
+Given three or more strings, find the longest common subsequence among them.
+Subsequence of a Subsequence
+
+Given two strings, find the length of the longest common subsequence where the characters must appear in the same order as they appear in both strings.
+These questions cover a variety of applications and extensions of the Longest Common Subsequence problem, helping to deepen your understanding of dynamic programming techniques.

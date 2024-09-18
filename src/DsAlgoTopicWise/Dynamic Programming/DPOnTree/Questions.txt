@@ -1,0 +1,18 @@
+
+Here are five dynamic programming questions based on trees:
+
+Maximum Path Sum
+
+Given a binary tree, find the maximum path sum. The path may start and end at any node in the tree.
+Diameter of a Binary Tree
+
+Find the diameter of a binary tree, which is the length of the longest path between any two nodes. The diameter may or may not pass through the root.
+Maximum Depth of Binary Tree
+
+Calculate the maximum depth (or height) of a binary tree using dynamic programming principles by storing the depths of subtrees.
+Balanced Binary Tree
+
+Determine if a binary tree is height-balanced, meaning the left and right subtrees of any node differ in height by no more than one. Use dynamic programming to store the height of subtrees.
+Lowest Common Ancestor (LCA)
+
+Given a binary tree and two nodes, find their lowest common ancestor using a dynamic programming approach to cache the parent nodes or subtree information.

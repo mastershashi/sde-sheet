@@ -1,0 +1,24 @@
+Here are seven dynamic programming questions based on matrix chain multiplication:
+
+Matrix Chain Multiplication
+
+Given an array of matrices, find the minimum cost of multiplying these matrices together. The cost is determined by the number of scalar multiplications.
+Optimal Parenthesization
+
+Given a sequence of matrices, determine the optimal way to parenthesize them to minimize the total number of multiplications. Return the optimal parenthesization as well.
+Maximum Chain Length
+
+Given an array of matrices, find the maximum length of a chain that can be formed with the given matrices while maintaining compatibility in dimensions.
+Count Different Parenthesizations
+
+Given a sequence of matrices, count the number of distinct ways to parenthesize the matrices for multiplication, irrespective of the cost.
+Matrix Chain Multiplication with Dimensions
+
+Given a list of dimensions instead of matrices, compute the minimum number of scalar multiplications required to multiply the matrices represented by those dimensions.
+Longest Increasing Subsequence in Matrix Multiplication
+
+Given a matrix chain, find the length of the longest increasing subsequence based on the dimensions of the matrices.
+Balanced Matrix Chain Multiplication
+
+Given a sequence of matrices, determine if it's possible to multiply them in such a way that results in a square matrix. If so, find the optimal multiplication strategy.
+These questions cover various aspects of matrix chain multiplication and allow for exploration of dynamic programming techniques in this context

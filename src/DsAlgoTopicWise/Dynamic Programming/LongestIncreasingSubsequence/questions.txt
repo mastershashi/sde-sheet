@@ -1,0 +1,32 @@
+Here are ten dynamic programming questions based on the Longest Increasing Subsequence (LIS) concept:
+
+Longest Increasing Subsequence
+
+Given an array of integers, find the length of the longest increasing subsequence.
+Longest Bitonic Subsequence
+
+Find the length of the longest subsequence that first increases and then decreases in a given array.
+Longest Increasing Subsequence with One Deletion
+
+Given an array, find the length of the longest increasing subsequence that can be achieved by deleting at most one element.
+Number of Longest Increasing Subsequences
+
+Given an array, count the number of distinct longest increasing subsequences.
+Longest Increasing Subsequence in a 2D Matrix
+
+Given a 2D matrix, find the length of the longest increasing path in the matrix.
+Maximum Sum Increasing Subsequence
+
+Given an array of integers, find the maximum sum of an increasing subsequence.
+Longest Increasing Subsequence with Constraints
+
+Given an array of integers where each element has an associated constraint, find the longest increasing subsequence that satisfies these constraints.
+Longest Increasing Subsequence in a String
+
+Given a string, find the length of the longest increasing subsequence based on the ASCII values of the characters.
+Longest Palindromic Subsequence
+
+Given a string, find the length of the longest subsequence that is a palindrome, leveraging the LIS concept.
+Longest Subsequence with Difference of 1
+
+Given an array, find the length of the longest subsequence where the difference between consecutive elements is 1.

@@ -1,0 +1,24 @@
+Here’s a list of seven dynamic programming questions based on the Fibonacci series:
+
+Fibonacci Number Calculation
+
+Given an integer n, calculate the nth Fibonacci number using dynamic programming.
+Fibonacci Series Up to N
+
+Generate a list of all Fibonacci numbers up to a given integer N using dynamic programming.
+Count Ways to Reach the Nth Step
+
+You can climb stairs by taking 1 or 2 steps at a time. Given n steps, find the number of distinct ways to reach the top. (This can be related to Fibonacci as it mirrors the Fibonacci series.)
+Minimum Cost Climbing Stairs
+
+Given an array of costs where the ith element represents the cost of stepping on the ith step, find the minimum cost to reach the top of the stairs (you can either start from step 0 or step 1).
+Tribonacci Number Calculation
+
+Extend the Fibonacci series to a Tribonacci series where each number is the sum of the three preceding ones. Given an integer n, calculate the nth Tribonacci number.
+Count Ways to Reach N Using 1, 2, or 3 Steps
+
+You can climb stairs by taking 1, 2, or 3 steps at a time. Given n steps, find the number of distinct ways to reach the top.
+Fibonacci Sum
+
+Given an integer n, find the sum of the first n Fibonacci numbers using dynamic programming.
+These questions allow you to explore different aspects of dynamic programming while working with Fibonacci-like sequences

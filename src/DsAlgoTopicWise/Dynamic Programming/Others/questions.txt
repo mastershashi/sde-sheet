@@ -1,0 +1,18 @@
+Here are five dynamic programming questions that do not belong to the patterns you've specified (LCS, LIS, Fibonacci, Knapsack, Unbounded Knapsack, DP on Grid, DP on Trees, Matrix Chain Multiplication, Kadane's Algorithm):
+
+Minimum Path Sum in a Grid (Non-Grid DP)
+
+Given a 2D grid of non-negative integers, find a path from the top left to the bottom right that minimizes the sum of the values along the path.
+Counting Valleys
+
+Given an array of integers representing heights, determine how many valleys are present. A valley is defined as a sequence of elements that are lower than the surrounding elements.
+Maximum Profit in Job Scheduling
+
+Given a set of jobs with start times, end times, and profits, find the maximum profit you can earn by scheduling non-overlapping jobs.
+Palindrome Partitioning
+
+Given a string, determine the minimum number of cuts needed to partition the string into palindromic substrings.
+Burst Balloons
+
+Given an array of balloons, each with a certain value, find the maximum coins you can collect by bursting the balloons strategically.
+These questions focus on dynamic programming concepts that diverge from the specified patterns, providing a variety of challenges
