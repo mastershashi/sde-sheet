@@ -1,0 +1,231 @@
+Strings:
+
+Why are strings immutable in java?
+How intern() works?
+How many objects are created in Strings using string literals and new operator?
+How string constant pool works?
+Difference between equals and == operator?
+Difference between string , string buffer and string builder.
+Object:
+
+Why is wrapper class required?
+Methods of Object class?
+Does java gives importance to primitive data types?
+Is Java pass by value or pass by reference?
+Oops
+
+Types of oops
+Composition vs Aggregation vs Association?
+Function overloading vs overriding
+Difference between Abstract class and Interface?
+Can private method or static methods be overridden in Java?
+Can main() method be overloaded?
+Can Abstract class have main method?
+Serialisation
+
+What is Serialisation and Deserialisation?
+Use of transient keyword?
+Is it possible to serialise a class if its super class is not serialisable ?Can the class be still serialised and deserialised?
+Answer: yes provided that non-serialisable super class has no args constructor which is involved at deserialisation to initialise the super class.
+
+4. Can Uninitialised non serialised , non transient fields still be tolerated?Answer: yes
+
+Cloning
+
+What is marker interface?
+What is shallow copy and Deep copy?
+Exception
+
+Difference between Error and Exception?
+Checked vs Unchecked Exception?
+Create custom Exception?
+What is Runtime exception ?
+How does JVM handle Exception?
+Difference between Final, Finalise and Finally?
+Super class of all exceptions?
+Is throwable an interface?
+When Finally block doesn’t get executed?
+Can subclass throw higher checked exception than base class?
+Can we throw an unchecked exception in child class if parent class doesn’t throw any exception?
+Difference between throw and throws()
+Usage of Enum
+
+Why to use Enum?
+Garbage collection
+
+How does Garbage collection in Java works?
+Collection
+
+Array vs ArrayList?
+ArrayList vs LinkedList? When to use which collection?
+Fail Safe vs Fail Fast Iterators?
+What is concurrent modification exception?
+Internal working of HashMap
+Java8 changes to HashMap
+
+Why to override equals() and hashcode() method?
+HashSet vs LinkedHashSet vs TreeSet
+What is the Internal Datastructure in TreeMap? How the elements are sorted?
+HashMap vs ConcurrentHashMap
+Comparable vs Comparator
+What is blocking Queue?
+
+
+
+MultiThreading
+
+MultiThreading vs MultiProcessing vs MultiProgramming vs MultiTasking?
+Life cycle of a Thread
+Extends vs Runnable
+yield() vs sleep() vs join() ?
+wait() vs sleep() ?
+why is join() method used?
+Can we Override start() method in Thread?
+Can we Override run() method?
+Can we start the thread twice?
+What is IllegalThreadStateException?
+What happens if run() method is called without start()?
+Why do we use ThreadPool?
+What is Race Condition?
+What is Synchronisation?Types of Synchronisation?
+Object Level Locking vs Class Level Locking?
+If there is 2 synchronised methods m1 and m2 in a class, can 2 different threads t1 and t2 call different methods(m1,m2) respectively on same object of class c at same time ?
+Answer — No. Only 1 Thread can hold the lock on a object of a class.However the other non synchronised methods can be called on same object.
+If a class has a synchronised method and non synchronised method, can multiple threads execute non synchronised methods?
+Answer: yes. If a class has a synchronised method and non synchronised method , multiple threads can access non synchronised methods.
+Can 2 threads call 2 different static synchronised methods of same class?
+Answer : The static synchronised methods of same class always block each other as 1 lock per class exists. So no 2 static synchronised methods can execute at the same time.
+Does static synchronised methods block a non synchronised methods?
+Answer: No. The thread executing static synchronised method holds a lock on the class and the executing the non static synchronised method holds lock on the object on which the method has been called, these 2 locks are different and these threads dont block eachother.
+Can Constructors be synchronised?
+What is DeadLock?
+What is Inter thread communication?Explain wait(),notify() and notifyall()?
+What is IllegalMonitorStateException?
+Which class does wait(),notify() and notifyall() method belong?
+Explain few Thread class methods?is Sleep() a method in Thread class or Object class?
+Producer Consumer Problem in Java?
+Volatile vs Synchronised?
+What are Atomic variables?
+Concurrency
+
+runnable vs callable ?
+What is Future Object?
+What is CompletableFuture?
+Use of Done() , IsCancelled() and Cancel() method of Future Object?
+Explain ThreadLocal class
+What is CountDownLatch?
+What is CyclicBarrier?
+What is ReEntrant lock?
+ExecutorService.submit() vs Executor.execute()?
+Different types of ThreadExecutor Services?
+Explain how FixedThreadPool executor works?
+Java 8
+
+Interface8 changes
+What is Functional Interface? why do we need it?
+Difference between Collection and Stream
+What is Terminal Operator vs Intermediate operators?
+What is Optional?
+Flatmap vs Map?
+Difference between Parallel sort vs sort
+Difference between Predicate vs BiPredicate?
+How Diamond problem is solved in Java8?
+
+Difference between JDK,JRE and JVM
+What is Immutable class?
+What are solid principles?
+Difference between ClassNotFound vs NoClassDefError?
+What is Singleton Design pattern?Explain ThreadSafe Singleton and Bill Pugh Singleton ?
+How to break Singleton?
+Explain few features in each Java versions starting from Java8
+
+
+
+Important multithreading questions:
+
+1.  * Write a program to implement bounded blocking queue. This is similar to consumer producer problem
+ * Properties of queue
+ * 1) If queue is empty poll will wait with timeout till item is available
+ * 2) If queue is full offer will wait with timeout till space is available
+
+2.  * 
+ * Write a program to count words. This program should be threadsafe.
+ * Implement two apis 
+ * 1) void addWord(String word) -> increment count of this word
+ * 2) long getCount(String word) -> get count of this word
+ * 
+ * Solution
+ * Keep a concurrent map. Key to this map should be word while value should be AtomicLong to update it
+ * in threadsafe way
+ * 
+ * Test cases
+ * One word updated by many threads
+ * Many words updated by many threads
+ *
+ *@Threadsafe
+ */
+
+3.  * Write a program which fills up boolean matrix from top left to bottom right with true. 
+ * This program should support two apis
+ * 1) void updateMatrix() which updates last position of matrix with true
+ * 2) boolean getVal(int x,int y) return boolean val at matrix[x][y]
+ * 
+ * This program should be threadsafe.
+ * 
+ * Solution
+ * Use AtomicLong to increment the value and return old value.
+ * 
+ * Test cases
+ * 1) Try with single thread
+ * 2) Try with multiple threads and big matrix size.
+ *
+ 4. * 
+ * Write a program which keeps min and max value in threadsafe way
+ * Support 2 apis
+ * void updateMaxMin(int val)
+ * int getMin()
+ * int getMax()
+ * 
+ * Solution
+ * Use compareAndSet method of AtomicInteger to update min and max
+ *
+ * @ThreadSafe
+ 5. /**
+ * A class that has 5 threads - two to increment the myVar variable, two to decrement the myVar variable and one to print the value of myVar.
+ * Implement increment(), decrement() and printVar() methods such that the following series is printed:
+ * 0 1 2 3 4 5 4 3 2 1 0 1 2 3 4 5 4 3 2 1 ... (repeating)
+ */
+
+ 6.  *
+ * Develop a software to count number of events in last 5 mins. You have to support two apis
+ * 1) addEvent() -> It means increment event by 1
+ * 2) getTotalEvents() -> Return total number of events in last 5 mins
+ * 
+ * Program should support millions of events every minute and should also provide multi-threading support
+ * 
+ * This class might not have 100% accuracy as far as events in last 5 mins are concerned. 
+ * Since we are using circular queue last second information may not be very accurate.
+ * 
+ * Solution:
+ * Keep atomiclong of 300 in array. PositionUpdater updates position every second.
+ * @Threadsafe
+
+ 7. /**
+ * Given a queue which gets millions of messages. Message is of form <Domain,Update>.
+ * You have 10000 domain tables. Also you have 50 worker threads. You can only get 
+ * data from front of the queue. Threads get data from the front and then update the 
+ * domain table. If work is being done on domain table you cannot apply another update.
+ * Update should also be applied sequentially. So an update coming later on should not
+ * be applied before an update coming sooner.
+ */
+ 8. /**
+ * Design a mutex using 2 variable method assuming operation ice happens atomically
+ */
+ 9. Create a thread pool
+ 10. /**
+ * Facebook interview question
+ * Implement a non block run which takes as many runnables as given but only
+ * runs a specified number of threads.
+ * You can also update maxSize in between which will change number of threads executing
+ * http://tutorials.jenkov.com/java-concurrency/thread-pools.html
+ */  
