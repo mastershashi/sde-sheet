@@ -76,6 +76,6 @@ class DijkstraAlgo {
             System.out.print(res[i]+" ");
         }
         System.out.println();
-        
+    } 
     
 }
