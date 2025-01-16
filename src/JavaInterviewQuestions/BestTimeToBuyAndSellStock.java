@@ -11,8 +11,10 @@ public class BestTimeToBuyAndSellStock {
         for (int price : prices) {
             if (price < minPrice) {
                 minPrice = price; // Update the minimum price
+                System.out.println(minPrice);
             } else if (price - minPrice > maxProfit) {
                 maxProfit = price - minPrice; // Update the maximum profit
+                System.out.println("    "+maxProfit);
             }
         }
 

@@ -35,7 +35,7 @@ public class LongestPalindromicSubstring {
         return s.substring(start, end + 1).length();
     }
     public static void main(String[] args) {
-        String s1 = "ABCDDCH";
+        String s1 = "ABCDDCHA";
         System.out.println(longestPalindromicSubstring(s1));
     }
 }

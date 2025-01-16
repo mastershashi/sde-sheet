@@ -27,7 +27,7 @@ public class CustomHashMap<K,V> {
     private void put(K key, V value){
         int hash = hash(key);
         Entry<K,V> entry = table[hash];
-        if(entry != null){
+        while(entry != null){
                 if(entry.key.equals(key)){
                     entry.value = value;
                     return;
@@ -59,19 +59,21 @@ public class CustomHashMap<K,V> {
     
     private void remove(K key){
         int index = hash(key);
-        Entry<K,V> entry = table[index];
-        Entry<K,V> prev = null;
-        while( entry!= null){
-            if(entry.key.equals(key)){
-                if(prev == null){
-                    table[index] = entry.next;
-                }else{
-                    prev.next = entry.next;
+        Entry<K, V> current = table[index];
+        Entry<K, V> prev = null;
+
+        while (current != null) {
+            if (current.key.equals(key)) {
+                if (prev == null) {  // Removing the first entry in the bucket
+                    table[index] = current.next;
+                } else {  // Removing from the middle or end of the linked list
+                    prev.next = current.next;
                 }
                 size--;
                 return;
             }
-            entry = entry.next;
+            prev = current;
+            current = current.next;
         }
     }
 

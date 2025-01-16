@@ -1,3 +1,4 @@
+package CompanyWise.Oracle.medium;
 public class LRUCache {
 
     private final Node head;

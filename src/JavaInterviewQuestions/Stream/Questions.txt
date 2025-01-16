@@ -1,0 +1,190 @@
+1. Find the Kth Largest Element in a Stream
+Problem: Given a stream of integers, find the Kth largest element in it.
+Stream Operations:
+Use a PriorityQueue (min-heap) to keep track of the K largest elements, then retrieve the Kth largest.
+Alternatively, sort and use .skip(k-1) and .findFirst().
+Solution:
+java
+Copy code
+stream.sorted(Comparator.reverseOrder()).skip(k-1).findFirst();
+2. Group By Multiple Fields (Multi-level Grouping)
+Problem: Given a list of employees with properties like department, salary, etc., group them first by department, then by salary ranges (e.g., low, medium, high).
+Stream Operations:
+Use Collectors.groupingBy() with nested collectors.
+Solution:
+java
+Copy code
+employees.stream()
+    .collect(Collectors.groupingBy(
+        Employee::getDepartment,
+        Collectors.groupingBy(emp -> getSalaryRange(emp.getSalary()))
+    ));
+3. Find All Pairs That Sum to a Specific Value
+Problem: Given a list of integers, find all unique pairs that sum up to a given target.
+Stream Operations:
+Use a set to track already processed elements.
+Stream and filter to find pairs efficiently.
+Solution:
+java
+Copy code
+Set<Integer> seen = new HashSet<>();
+List<int[]> pairs = list.stream()
+    .filter(n -> seen.contains(target - n))
+    .map(n -> new int[]{target - n, n})
+    .collect(Collectors.toList());
+4. Flatten and Sum Nested Collections (List of Lists)
+Problem: Given a list of lists of integers, flatten them and calculate the sum of all elements.
+Stream Operations: Use flatMap to flatten and then reduce to sum the values.
+Solution:
+java
+Copy code
+listOfLists.stream()
+    .flatMap(List::stream)
+    .reduce(0, Integer::sum);
+5. Generate All Subsets of a List (Power Set)
+Problem: Given a list of distinct integers, generate all possible subsets (the power set).
+Stream Operations: Use Stream.iterate() and flatMap to generate combinations.
+Solution:
+java
+Copy code
+Set<List<Integer>> subsets = 
+    Stream.of(new ArrayList<Integer>())
+          .flatMap(s -> 
+            list.stream().map(e -> { 
+              List<Integer> newList = new ArrayList<>(s); 
+              newList.add(e); 
+              return newList; 
+            })
+          )
+          .collect(Collectors.toSet());
+6. Find the Intersection of Two Lists
+Problem: Find the common elements between two lists.
+Stream Operations: Use filter() with contains() to get the intersection.
+Solution:
+java
+Copy code
+list1.stream()
+    .filter(list2::contains)
+    .distinct()
+    .collect(Collectors.toList());
+7. Find All Anagrams in a List of Strings
+Problem: Group strings that are anagrams of each other from a list of strings.
+Stream Operations: Use Collectors.groupingBy() and a transformation to sort the characters of each string.
+Solution:
+java
+Copy code
+list.stream()
+    .collect(Collectors.groupingBy(
+        str -> {
+            char[] chars = str.toCharArray();
+            Arrays.sort(chars);
+            return new String(chars);
+        }
+    ));
+8. Find the Longest Substring Without Repeating Characters
+Problem: Given a string, find the length of the longest substring without repeating characters.
+Stream Operations: Utilize a sliding window technique and Collectors.toList().
+Solution:
+java
+Copy code
+int maxLength = 0;
+Map<Character, Integer> map = new HashMap<>();
+for (int start = 0, end = 0; end < str.length(); end++) {
+    if (map.containsKey(str.charAt(end))) {
+        start = Math.max(start, map.get(str.charAt(end)) + 1);
+    }
+    map.put(str.charAt(end), end);
+    maxLength = Math.max(maxLength, end - start + 1);
+}
+9. Sliding Window Maximum
+Problem: Given a list of integers and a window size k, find the maximum value in each window.
+Stream Operations: Use a deque to efficiently maintain the maximums in each window.
+Solution:
+java
+Copy code
+Deque<Integer> deque = new LinkedList<>();
+List<Integer> result = new ArrayList<>();
+for (int i = 0; i < nums.length; i++) {
+    while (!deque.isEmpty() && nums[deque.peekLast()] <= nums[i]) {
+        deque.pollLast();
+    }
+    deque.offerLast(i);
+    if (deque.peekFirst() == i - k) deque.pollFirst();
+    if (i >= k - 1) result.add(nums[deque.peekFirst()]);
+}
+10. Find the Median of Two Sorted Arrays
+Problem: Given two sorted arrays, find the median of the combined array.
+Stream Operations: Merging and sorting, or a more efficient approach using two pointers.
+Solution:
+java
+Copy code
+List<Integer> merged = Stream.concat(Arrays.stream(nums1), Arrays.stream(nums2))
+    .sorted()
+    .collect(Collectors.toList());
+int n = merged.size();
+if (n % 2 == 1) return merged.get(n / 2);
+return (merged.get(n / 2 - 1) + merged.get(n / 2)) / 2.0;
+11. Longest Increasing Subsequence
+Problem: Find the length of the longest increasing subsequence in an array.
+Stream Operations: Dynamic programming, but utilizing Collectors.toList() for intermediate results.
+Solution:
+java
+Copy code
+int[] dp = new int[nums.length];
+Arrays.fill(dp, 1);
+for (int i = 1; i < nums.length; i++) {
+    for (int j = 0; j < i; j++) {
+        if (nums[i] > nums[j]) {
+            dp[i] = Math.max(dp[i], dp[j] + 1);
+        }
+    }
+}
+return Arrays.stream(dp).max().getAsInt();
+12. K Smallest Elements in a Stream
+Problem: Given a stream of integers, find the K smallest elements.
+Stream Operations: Use a PriorityQueue or sorted() to retrieve the smallest elements.
+Solution:
+java
+Copy code
+List<Integer> smallest = stream.sorted()
+                              .limit(k)
+                              .collect(Collectors.toList());
+13. Find the Longest Prefix of Strings
+Problem: Given a list of strings, find the longest common prefix.
+Stream Operations: Use reduce() to iteratively compare prefixes.
+Solution:
+java
+Copy code
+Optional<String> prefix = list.stream()
+                              .reduce((s1, s2) -> {
+                                  int i = 0;
+                                  while (i < s1.length() && i < s2.length() && s1.charAt(i) == s2.charAt(i)) {
+                                      i++;
+                                  }
+                                  return s1.substring(0, i);
+                              });
+14. Partition List Based on Predicate
+Problem: Partition a list of elements into two groups based on a predicate.
+Stream Operations: Use Collectors.partitioningBy().
+Solution:
+java
+Copy code
+Map<Boolean, List<Integer>> partitioned = list.stream()
+    .collect(Collectors.partitioningBy(n -> n % 2 == 0));
+15. Maximum Product Subarray
+Problem: Find the contiguous subarray (within an array) which has the largest product.
+Stream Operations: Dynamic programming approach with additional state tracking.
+Solution:
+java
+Copy code
+int maxProduct = nums[0], minProduct = nums[0], result = nums[0];
+for (int i = 1; i < nums.length; i++) {
+    if (nums[i] < 0) {
+        int temp = maxProduct;
+        maxProduct = minProduct;
+        minProduct = temp;
+    }
+    maxProduct = Math.max(nums[i], maxProduct * nums[i]);
+    minProduct = Math.min(nums[i], minProduct * nums[i]);
+    result = Math.max(result, maxProduct);
+}

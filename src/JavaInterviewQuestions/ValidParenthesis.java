@@ -13,10 +13,11 @@ public class ValidParenthesis {
         paramMap.put('[',']');
         paramMap.put('{','}');
         paramMap.put('(',')');
-         Stack<Character> stackArray = new Stack<>();
+        
+        Stack<Character> stackArray = new Stack<>();
+
         for(int i = 0; i< input.length(); i++){
            Character ch = paramMap.get(input.charAt(i));
-           System.out.println("ch=: "+ch);
             if(ch != null){
                 stackArray.push(input.charAt(i));
             }else{
@@ -24,11 +25,8 @@ public class ValidParenthesis {
                     System.out.println("Invalid String");
                     break;
                 }
-                //Buggy Code
                 Character leftBracket = stackArray.peek();
-                System.out.println("leftBracket: "+leftBracket);
                 Character correctBracket = paramMap.get(leftBracket);
-                System.out.println("correctBracket: "+correctBracket);
                 if(input.charAt(i) != correctBracket){
                     System.out.println("invalid String");
                 }else{
