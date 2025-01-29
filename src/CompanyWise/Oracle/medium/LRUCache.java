@@ -1,4 +1,8 @@
 package CompanyWise.Oracle.medium;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class LRUCache {
 
     private final Node head;
