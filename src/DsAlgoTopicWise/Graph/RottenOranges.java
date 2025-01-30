@@ -42,8 +42,8 @@ public class RottenOranges {
             int col = queueNode.col;
             int tm = queueNode.time;
             time = Math.max(tm, time);
-            int[] dRow = new int[]{-1,0,1,0};
-            int[] dCol = new int[]{0,1,0,-1};
+            int[] dRow = new int[]{-1,0,1,0}; // up -> right -> down -> left 
+            int[] dCol = new int[]{0,1,0,-1}; // up -> right -> down -> left 
             
             for(int k =0; k< 4;k++){
                 int nRow = row+ dRow[k];
