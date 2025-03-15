@@ -1,3 +1,4 @@
+package PatternWise.BinarySearch;
 /*
  * You are given an m x n integer matrix matrix with the following two properties:
 

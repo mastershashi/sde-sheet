@@ -12,7 +12,7 @@ public class HouseRobber {
         dp[1] = Math.max(houseArr[0],houseArr[1]);
 
         // for ith house we have two choice either we rob it or skip it 
-        // skip i : if we are skipping ith house then i-1 th hiuse we rob
+        // skip i : if we are skipping ith house then i-1th house we rob
         // rob i : if we are robbing ith house then we cannot rob i-1th house. we have to rob i-2nd house and total amount would be amount rob at ith house + amount rob at i-2nd house 
 
         for( int i =2 ;i<houseArr.length ;i++){

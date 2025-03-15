@@ -5,7 +5,6 @@ public class LongestCommonSubsequence {
         int m = s.length();
         int n = p.length();
         int[][] dp = new int[m+1][n+1];
-        int maxLength = 0;
 
         for(int i = 1; i <=m ;i++){
             for(int j = 1 ;j<=n ;j++){

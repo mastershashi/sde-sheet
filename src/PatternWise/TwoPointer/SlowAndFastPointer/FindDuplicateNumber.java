@@ -9,10 +9,10 @@ public class FindDuplicateNumber {
         do{
             slow = arr[slow];
             fast = arr[arr[fast]];
-        }while(slow != fast);
+        }while(slow != fast); // cycle detection
 
         slow = arr[0];
-        while(slow != fast){
+        while(slow != fast){ // finding entry point of the cycle
             slow = arr[slow];
             fast = arr[fast];
         }
@@ -21,7 +21,7 @@ public class FindDuplicateNumber {
 
     public static void main(String[] args) {
         // 0=<arr[i] < n 
-        System.out.println(FindDuplicateNumber.findDuplicateNumber(new int[]{2,1,0,2,3}));
+        System.out.println(FindDuplicateNumber.findDuplicateNumber(new int[]{2,1,4,3,3,4}));
     }
     
 }

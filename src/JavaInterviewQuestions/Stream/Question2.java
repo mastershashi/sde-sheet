@@ -30,11 +30,11 @@ public class Question2 {
         int n = numbers.size();
         for(int i = 0;i < n ;i++){
             minHeap.add(numbers.get(i));
-        }
-
-        for(int i = 1;i <=(n-k) ;i++){
+            if(minHeap.size()> k){
                 minHeap.poll();
+            }
         }
+        minHeap.peek();
       
         System.out.println("Minheap Kth Highest number"+minHeap.peek());
 

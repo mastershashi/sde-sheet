@@ -1,3 +1,4 @@
+package PatternWise.Graph;
 class NumberOfIslandDFS{
     private void dfs(int [][]matrix, int row, int col){
         if(row < 0 ||  col < 0 || row > matrix.length-1 ||  col > matrix[0].length -1) return;
