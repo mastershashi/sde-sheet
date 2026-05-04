@@ -1,0 +1,125 @@
+🔹 Search / Text / NLP
+Search engine query lookup
+→ Inverted Index
+→ HashMap + Posting Lists
+Autocomplete (Google search bar)
+→ Prefix matching
+→ Trie
+Spell correction
+→ Approximate string matching
+→ Levenshtein Distance
+Find pattern in text (Ctrl+F)
+→ String matching
+→ KMP / Rabin-Karp
+Rank search results
+→ Relevance scoring
+→ Heap / Priority Queue
+Detect plagiarism
+→ Sequence similarity
+→ Longest Common Subsequence (LCS)
+
+
+
+🔹 Caching / Performance
+Browser cache / app cache
+→ Cache eviction policy
+→ LRU Cache (HashMap + Doubly Linked List)
+Database query caching
+→ Fast lookup
+→ HashMap
+Rate limiting APIs
+→ Sliding window tracking
+→ Queue / Sliding Window
+
+
+
+🔹 Streaming / Big data
+Find trending topics (Twitter/X)
+→ Top-K frequent elements
+→ Heap + HashMap
+Process live sensor data
+→ Stream processing
+→ Sliding Window
+Random sampling from stream
+→ Uniform sampling
+→ Reservoir Sampling
+
+
+🔹 Graph problems (very important)
+Google Maps shortest path
+→ Path optimization
+→ Dijkstra’s Algorithm
+Detect deadlock in OS
+→ Cycle detection
+→ DFS / Union-Find
+Social network friend groups
+→ Connectivity
+→ Disjoint Set (Union-Find)
+Course scheduling (prerequisites)
+→ Dependency ordering
+→ Topological Sort
+Recommendation systems (friends/products)
+→ Graph traversal
+→ BFS / DFS
+
+
+🔹 System design / distributed systems
+Load balancing servers
+→ Request distribution
+→ Consistent Hashing
+Distributed key-value store (like Redis)
+→ Fast access
+→ Hash Table
+Search backend like Apache Lucene
+→ Full-text search
+→ Inverted Index + BM25 + Heap
+
+
+🔹 Optimization problems
+Knapsack (budget allocation)
+→ Optimal selection
+→ Dynamic Programming
+Stock buy/sell profit
+→ Maximize gain
+→ Greedy / DP
+Task scheduling (CPU/jobs)
+→ Resource optimization
+→ Greedy + Heap
+
+
+🔹 Range queries / analytics
+Range sum query (analytics dashboards)
+→ Fast aggregation
+→ Prefix Sum / Fenwick Tree
+Frequent updates + queries
+→ Dynamic range queries
+→ Segment Tree
+
+
+🔹 Strings / advanced indexing
+Fast substring search in large text
+→ Suffix indexing
+→ Suffix Array / Suffix Tree
+DNA sequence matching
+→ Pattern matching
+→ Rolling Hash (Rabin-Karp)
+🔹 Geometry / spatial
+Find nearby places (maps)
+→ Spatial indexing
+→ KD-Tree / QuadTree
+
+
+🔹 Misc real-world
+Undo/Redo in editors
+→ State tracking
+→ Stack
+Navigation history (browser back/forward)
+→ Bidirectional traversal
+→ Two Stacks
+
+
+🔹 Big picture (this is the real takeaway)
+
+Your pattern is essentially:
+
+Problem → Abstraction → Data Structure → Algorithm → Optimization

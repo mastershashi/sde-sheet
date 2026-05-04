@@ -9,124 +9,182 @@ import java.util.Queue;
 import java.util.TreeMap;
 
 public class TopViewOfBST {
-    static class  TreeNode {
+    /*
+     * ============================================================
+     * 🔥 CORE IDEA
+     * ============================================================
+     *
+     * Level-order traversal with either:
+     * - level index for left/right view
+     * - horizontal distance for top/bottom view
+     *
+     * ============================================================
+     */
+
+    static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
-    static class Pair{
+
+    static class Pair {
         TreeNode node;
         int hd;
-        Pair(TreeNode node, int hd){
+
+        Pair(TreeNode node, int hd) {
             this.node = node;
             this.hd = hd;
         }
     }
-    public  List<Integer> getTopView(TreeNode root){
-        Map<Integer, Integer> map = new TreeMap<>();// TreeMap automatically sorts the keys for the result will be in sorte3d order based on it's horizontal distance
+
+    /*
+     * ------------------------------------------------------------
+     * 1. TOP VIEW
+     * Variation: first node at each horizontal distance
+     * - GFG Top View of Binary Tree
+     * - Companies: Amazon, Microsoft, Flipkart, Adobe, Samsung
+     * - Time: O(n log w) with TreeMap, w = horizontal width
+     * - Space: O(n)
+     * ------------------------------------------------------------
+     */
+    public List<Integer> getTopView(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        Map<Integer, Integer> map = new TreeMap<>();
         Queue<Pair> queue = new LinkedList<>();
         queue.add(new Pair(root, 0));
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             Pair current = queue.poll();
             TreeNode node = current.node;
             int hd = current.hd;
-            if(!map.containsKey(hd)){
+            if (!map.containsKey(hd)) {
                 map.put(hd, node.val);
             }
-            if(node.left != null){
+            if (node.left != null) {
                 queue.add(new Pair(node.left, hd - 1));
             }
-            if(node.right != null){
+            if (node.right != null) {
                 queue.add(new Pair(node.right, hd + 1));
             }
         }
         return new ArrayList<>(map.values());
     }
-    public List<Integer> getLeftView(TreeNode root){
-              // A map to track the first node at each level
-        Map<Integer, Integer> map = new HashMap<>();
+
+    /*
+     * ------------------------------------------------------------
+     * 2. LEFT VIEW
+     * Variation: first node at each level
+     * - GFG Left View of Binary Tree
+     * - Companies: Amazon, Microsoft, Flipkart, Adobe
+     * - Time: O(n)
+     * - Space: O(n)
+     * ------------------------------------------------------------
+     */
+    public List<Integer> getLeftView(TreeNode root) {
         List<Integer> leftView = new ArrayList<>();
-        Queue<Pair> queue = new LinkedList<>();
-        
-        if (root != null) {
-            queue.offer(new Pair(root, 0)); // Start from root at level 0
+        if (root == null) {
+            return leftView;
         }
-        
-        // Perform level-order traversal
+
+        Queue<Pair> queue = new LinkedList<>();
+        queue.offer(new Pair(root, 0));
+
         while (!queue.isEmpty()) {
-            Pair current = queue.poll();
-            TreeNode node = current.node;
-            int level = current.hd;
-            
-            // If this is the first node at the current level, add it to the left view
-            if (!map.containsKey(level)) {
-                map.put(level, node.val);
-                leftView.add(node.val); // Adding the first node of each level
-            }
+            int size = queue.size();
 
-            // Add left child first to the queue (this ensures we process left nodes first)
-            if (node.left != null) {
-                queue.offer(new Pair(node.left, level + 1));
-            }
+            for (int i = 0; i < size; i++) {
+                Pair current = queue.poll();
+                TreeNode node = current.node;
 
-            // Add right child only if left child is not available at that level
-            if (node.right != null && node.left == null) {
-                queue.offer(new Pair(node.right, level + 1));
+                if (i == 0) {
+                    leftView.add(node.val);
+                }
+
+                if (node.left != null) {
+                    queue.offer(new Pair(node.left, current.hd + 1));
+                }
+                if (node.right != null) {
+                    queue.offer(new Pair(node.right, current.hd + 1));
+                }
             }
         }
         return leftView;
     }
-    public List<Integer> getRightView(TreeNode root){
-        Map<Integer, Integer> map = new HashMap<>();
+
+    /*
+     * ------------------------------------------------------------
+     * 3. RIGHT VIEW
+     * Variation: last node at each level
+     * - LC 199. Binary Tree Right Side View
+     * - Companies: Amazon, Microsoft, Facebook/Meta, Apple, Bloomberg,
+     *   ByteDance, Uber
+     * - Time: O(n)
+     * - Space: O(n)
+     * ------------------------------------------------------------
+     */
+    public List<Integer> getRightView(TreeNode root) {
         List<Integer> rightView = new ArrayList<>();
-        Queue<Pair> queue = new LinkedList<>();
-        
-        if (root != null) {
-            queue.offer(new Pair(root, 0)); // Start from root at level 0
+        if (root == null) {
+            return rightView;
         }
-        
-        // Perform level-order traversal
+
+        Queue<Pair> queue = new LinkedList<>();
+        queue.offer(new Pair(root, 0));
+
         while (!queue.isEmpty()) {
-            Pair current = queue.poll();
-            TreeNode node = current.node;
-            int level = current.hd;
-            
-            // If this is the first node at the current level, add it to the right view
-            map.put(level, node.val);
-            rightView.add(node.val); // Adding the first node of each level
+            int size = queue.size();
 
-            // Add right child first to the queue (this ensures we process right nodes first)
-            if (node.right != null) {
-                queue.offer(new Pair(node.right, level + 1));
-            }
+            for (int i = 0; i < size; i++) {
+                Pair current = queue.poll();
+                TreeNode node = current.node;
 
-            // Add left child only if right child is not available at that level
-            if (node.left != null && node.right == null) {
-                queue.offer(new Pair(node.left, level + 1));
+                if (i == size - 1) {
+                    rightView.add(node.val);
+                }
+
+                if (node.left != null) {
+                    queue.offer(new Pair(node.left, current.hd + 1));
+                }
+                if (node.right != null) {
+                    queue.offer(new Pair(node.right, current.hd + 1));
+                }
             }
         }
         return rightView;
     }
-    public  List<Integer> getBottomView(TreeNode root){
+
+    /*
+     * ------------------------------------------------------------
+     * 4. BOTTOM VIEW
+     * Variation: last node at each horizontal distance
+     * - GFG Bottom View of Binary Tree
+     * - Companies: Amazon, Microsoft, Flipkart, Adobe
+     * - Time: O(n log w) with TreeMap, w = horizontal width
+     * - Space: O(n)
+     * ------------------------------------------------------------
+     */
+    public List<Integer> getBottomView(TreeNode root) {
         if (root == null) {
             return new ArrayList<>();
         }
-        Map<Integer, Integer> map = new TreeMap<>();// TreeMap automatically sorts the keys for the result will be in sorte3d order based on it's horizontal distance
+        Map<Integer, Integer> map = new TreeMap<>();
         Queue<Pair> queue = new LinkedList<>();
         queue.add(new Pair(root, 0));
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             Pair current = queue.poll();
             TreeNode node = current.node;
             int hd = current.hd;
-            
-            // In the map, store the node at each horizontal distance.
-            // If a node already exists at this HD, replace it (since we want the bottom-most node).
+
             map.put(hd, node.val);
 
-            // Add left and right children with the corresponding horizontal distance
             if (node.left != null) {
                 queue.offer(new Pair(node.left, hd - 1));
             }
@@ -157,5 +215,4 @@ public class TopViewOfBST {
         List<Integer> bottomView = solution.getBottomView(root);
         System.out.println("Bottom view of the BST is: " + bottomView);
     }
-    
 }
