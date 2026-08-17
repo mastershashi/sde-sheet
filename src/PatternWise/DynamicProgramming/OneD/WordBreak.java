@@ -52,6 +52,7 @@ public static boolean wordBreak(String s, List<String> wordDict) {
     public static void main(String[] args) {
 
         System.out.println(WordBreak.wordBreak("applepenapple" ,new ArrayList<>(Arrays.asList("apple", "pen"))));
+        System.out.println(WordBreak.wordBreak("peapplepenapple" ,new ArrayList<>(Arrays.asList("apple", "pen"))));
         System.out.println(WordBreak.wordBreakUsingSlidingWindow("applepenapple" ,new ArrayList<>(Arrays.asList("apple", "pen"))));
         
         

@@ -1,0 +1,47 @@
+Pattern 2 of Graph:
+
+Matrix DFS/BFS (Grid Traversal)
+Question:
+
+Number of Islands
+Flood Fill
+Pacific Atlantic
+Rotten Oranges
+Walls and Gates
+Shortest Path in Binary Matrix
+
+Direction Array : 
+
+int[][] directions = {
+    {1, 0}, // Down
+    {-1, 0}, // Up
+    {0, 1}, // Right
+    {0, -1} // Left 
+};
+
+DFS Template : 
+
+void dfs(int row, int col, int[][] grid, boolean[][] visited) {
+
+    visited[row][col] = true;
+
+    for (int[] dir : directions) {
+
+        int newRow = row + dir[0];
+        int newCol = col + dir[1];
+
+        if (isValid(newRow, newCol, grid, visited)) {
+            dfs(newRow, newCol, grid, visited);
+        }
+    }
+}
+
+boolean isValid(int r, int c, int[][] grid, boolean[][] visited) {
+
+    return r >= 0 &&
+           c >= 0 &&
+           r < grid.length &&
+           c < grid[0].length &&
+           !visited[r][c];
+}
+

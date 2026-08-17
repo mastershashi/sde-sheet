@@ -1,0 +1,52 @@
+2️⃣ Medium (80 Questions)
+(🔥 = Frequently asked in Nutanix)
+31. Trapping Rain Water (LeetCode #42) 🔥
+32. Merge Intervals (LeetCode #56) 🔥
+33. Longest Substring Without Repeating Characters (LeetCode #3) 🔥
+34. 3Sum (LeetCode #15) 🔥
+35. Rotate Image (LeetCode #48) 🔥
+36. Group Anagrams (LeetCode #49) 🔥
+37. Subarray Sum Equals K (LeetCode #560) 🔥
+38. Product of Array Except Self (LeetCode #238) 🔥
+39. Find All Duplicates in an Array (LeetCode #442) 🔥
+40. Longest Consecutive Sequence (LeetCode #128) 🔥
+41. Set Matrix Zeroes (LeetCode #73) 🔥
+42. Spiral Matrix (LeetCode #54) 🔥
+43. Container With Most Water (LeetCode #11) 🔥
+44. Word Break (LeetCode #139) 🔥
+45. Decode Ways (LeetCode #91) 🔥
+46. Implement Trie (LeetCode #208) 🔥
+47. Add Two Numbers (LeetCode #2) 🔥
+48. Remove Nth Node From End of List (LeetCode #19) 🔥
+49. Copy List with Random Pointer (LeetCode #138) 🔥
+50. LRU Cache (LeetCode #146) 🔥
+51. Kth Largest Element in an Array (LeetCode #215) 🔥
+52. Top K Frequent Elements (LeetCode #347) 🔥
+53. Find Median from Data Stream (LeetCode #295) 🔥
+54. Course Schedule (LeetCode #207) 🔥
+55. Number of Islands (LeetCode #200) 🔥
+56. Clone Graph (LeetCode #133) 🔥
+57. Word Ladder (LeetCode #127) 🔥
+58. Coin Change (LeetCode #322) 🔥
+59. Longest Increasing Subsequence (LeetCode #300) 🔥
+60. House Robber (LeetCode #198) 🔥
+61. Unique Paths (LeetCode #62) 🔥
+62. Jump Game (LeetCode #55) 🔥
+63. Gas Station (LeetCode #134) 🔥
+64. Task Scheduler (LeetCode #621) 🔥
+65. Subsets (LeetCode #78) 🔥
+66. Combination Sum (LeetCode #39) 🔥
+67. Permutations (LeetCode #46) 🔥
+68. Generate Parentheses (LeetCode #22) 🔥
+69. Palindrome Partitioning (LeetCode #131) 🔥
+70. Letter Combinations of a Phone Number (LeetCode #17) 🔥
+71. Search a 2D Matrix (LeetCode #74) 🔥
+72. Game of Life (LeetCode #289) 🔥
+73. Kth Smallest Element in a Sorted Matrix (LeetCode #378) 🔥
+74. Minimum Window Substring (LeetCode #76) 🔥
+75. Sliding Window Maximum (LeetCode #239) 🔥
+76. Longest Repeating Character Replacement (LeetCode #424) 🔥
+77. Permutation in String (LeetCode #567) 🔥
+78. Fruit Into Baskets (LeetCode #904) 🔥
+79. Maximum Points You Can Obtain from Cards (LeetCode #1423) 🔥
+80. Minimum Size Subarray Sum (LeetCode #209) 🔥

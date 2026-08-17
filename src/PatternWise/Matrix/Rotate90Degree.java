@@ -11,6 +11,8 @@ public class Rotate90Degree {
                 matrix[j][i] = temp;
             }
         }
+        System.out.println("Transpose Matrix:");
+        printMatrix(matrix);
     
         // reverse each row 
         for(int i =0 ;i< matrix.length ;i++){

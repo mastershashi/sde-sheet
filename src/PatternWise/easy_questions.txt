@@ -1,0 +1,60 @@
+1️⃣ Easy (30 Questions)
+Two Sum (LeetCode #1)
+
+Contains Duplicate (LeetCode #217)
+
+Valid Anagram (LeetCode #242)
+
+Valid Parentheses (LeetCode #20)
+
+Reverse Linked List (LeetCode #206)
+
+Merge Two Sorted Lists (LeetCode #21)
+
+Linked List Cycle (LeetCode #141)
+
+Binary Tree Level Order Traversal (LeetCode #102)
+
+Invert Binary Tree (LeetCode #226)
+
+Symmetric Tree (LeetCode #101)
+
+Climbing Stairs (LeetCode #70)
+
+Best Time to Buy and Sell Stock (LeetCode #121)
+
+Single Number (LeetCode #136)
+
+Number of 1 Bits (LeetCode #191)
+
+Reverse Integer (LeetCode #7)
+
+Palindrome Linked List (LeetCode #234)
+
+Balanced Binary Tree (LeetCode #110)
+
+Diameter of Binary Tree (LeetCode #543)
+
+Flood Fill (LeetCode #733)
+
+First Bad Version (LeetCode #278)
+
+Move Zeroes (LeetCode #283)
+
+Majority Element (LeetCode #169)
+
+Intersection of Two Linked Lists (LeetCode #160)
+
+Min Stack (LeetCode #155)
+
+Counting Bits (LeetCode #338)
+
+Power of Two (LeetCode #231)
+
+Missing Number (LeetCode #268)
+
+Find All Numbers Disappeared in an Array (LeetCode #448)
+
+Ransom Note (LeetCode #383)
+
+Word Pattern (LeetCode #290)

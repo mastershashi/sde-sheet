@@ -1,0 +1,312 @@
+📌 1. Arrays & Hashing (20 Questions)
+Two Sum (LeetCode #1) – Most frequent in phone screens.
+
+Trapping Rain Water (LeetCode #42) – Common in onsite rounds.
+
+Maximum Subarray (Kadane’s Algorithm) (LeetCode #53)
+
+Merge Intervals (LeetCode #56)
+
+Product of Array Except Self (LeetCode #238)
+
+Find All Duplicates in an Array (LeetCode #442)
+
+Longest Consecutive Sequence (LeetCode #128)
+
+Subarray Sum Equals K (LeetCode #560)
+
+3Sum (LeetCode #15)
+
+Rotate Image (LeetCode #48)
+
+Set Matrix Zeroes (LeetCode #73)
+
+Spiral Matrix (LeetCode #54)
+
+Container With Most Water (LeetCode #11)
+
+First Missing Positive (LeetCode #41)
+
+Jump Game (LeetCode #55)
+
+Insert Delete GetRandom O(1) (LeetCode #380)
+
+Minimum Window Substring (LeetCode #76)
+
+Sliding Window Maximum (LeetCode #239)
+
+Count Primes (LeetCode #204)
+
+Next Permutation (LeetCode #31)
+
+📌 2. Strings (15 Questions)
+Longest Substring Without Repeating Characters (LeetCode #3)
+
+Valid Anagram (LeetCode #242)
+
+Group Anagrams (LeetCode #49)
+
+Valid Parentheses (LeetCode #20)
+
+Longest Palindromic Substring (LeetCode #5)
+
+Palindromic Substrings (LeetCode #647)
+
+Minimum Window Substring (LeetCode #76)
+
+Decode Ways (LeetCode #91)
+
+Word Break (LeetCode #139)
+
+Implement Trie (Prefix Tree) (LeetCode #208)
+
+Wildcard Matching (LeetCode #44)
+
+Regular Expression Matching (LeetCode #10)
+
+String to Integer (atoi) (LeetCode #8)
+
+Find All Anagrams in a String (LeetCode #438)
+
+Smallest Range Covering Elements from K Lists (LeetCode #632)
+
+📌 3. Linked Lists (10 Questions)
+Reverse Linked List (LeetCode #206)
+
+Merge Two Sorted Lists (LeetCode #21)
+
+Linked List Cycle (LeetCode #141)
+
+Add Two Numbers (LeetCode #2)
+
+Intersection of Two Linked Lists (LeetCode #160)
+
+Remove Nth Node From End of List (LeetCode #19)
+
+Copy List with Random Pointer (LeetCode #138)
+
+LRU Cache (LeetCode #146)
+
+Merge K Sorted Lists (LeetCode #23)
+
+Palindrome Linked List (LeetCode #234)
+
+📌 4. Trees & Binary Search (20 Questions)
+Binary Tree Level Order Traversal (LeetCode #102)
+
+Serialize and Deserialize Binary Tree (LeetCode #297)
+
+Lowest Common Ancestor (LCA) of a Binary Tree (LeetCode #236)
+
+Validate Binary Search Tree (LeetCode #98)
+
+Invert Binary Tree (LeetCode #226)
+
+Diameter of Binary Tree (LeetCode #543)
+
+Construct Binary Tree from Preorder and Inorder Traversal (LeetCode #105)
+
+Binary Tree Maximum Path Sum (LeetCode #124)
+
+Balanced Binary Tree (LeetCode #110)
+
+Symmetric Tree (LeetCode #101)
+
+Flatten Binary Tree to Linked List (LeetCode #114)
+
+Binary Search Tree Iterator (LeetCode #173)
+
+Count Complete Tree Nodes (LeetCode #222)
+
+Path Sum III (LeetCode #437)
+
+Kth Smallest Element in a BST (LeetCode #230)
+
+Unique Binary Search Trees (LeetCode #96)
+
+Convert BST to Greater Tree (LeetCode #538)
+
+Delete Node in a BST (LeetCode #450)
+
+Vertical Order Traversal of a Binary Tree (LeetCode #987)
+
+Binary Tree Right Side View (LeetCode #199)
+
+📌 5. Graphs (15 Questions)
+Number of Islands (LeetCode #200)
+
+Course Schedule (Topological Sort) (LeetCode #207)
+
+Course Schedule II (LeetCode #210)
+
+Clone Graph (LeetCode #133)
+
+Word Ladder (LeetCode #127)
+
+Pacific Atlantic Water Flow (LeetCode #417)
+
+Alien Dictionary (LeetCode #269)
+
+Graph Valid Tree (LeetCode #261)
+
+Network Delay Time (LeetCode #743)
+
+Cheapest Flights Within K Stops (LeetCode #787)
+
+Word Search (LeetCode #79)
+
+Surrounded Regions (LeetCode #130)
+
+Redundant Connection (LeetCode #684)
+
+Shortest Path in Binary Matrix (LeetCode #1091)
+
+Find the City With the Smallest Number of Neighbors (LeetCode #1334)
+
+📌 6. Dynamic Programming (10 Questions)
+Climbing Stairs (LeetCode #70)
+
+Coin Change (LeetCode #322)
+
+Longest Increasing Subsequence (LIS) (LeetCode #300)
+
+Edit Distance (LeetCode #72)
+
+House Robber (LeetCode #198)
+
+Maximum Product Subarray (LeetCode #152)
+
+Word Break (LeetCode #139)
+
+Decode Ways (LeetCode #91)
+
+Unique Paths (LeetCode #62)
+
+Best Time to Buy and Sell Stock with Cooldown (LeetCode #309)
+
+📌 7. Heap & Priority Queue (5 Questions)
+Kth Largest Element in an Array (LeetCode #215)
+
+Merge K Sorted Lists (LeetCode #23)
+
+Top K Frequent Elements (LeetCode #347)
+
+Find Median from Data Stream (LeetCode #295)
+
+Task Scheduler (LeetCode #621)
+
+📌 8. Bit Manipulation & Math (5 Questions)
+Single Number (LeetCode #136)
+
+Number of 1 Bits (LeetCode #191)
+
+Reverse Integer (LeetCode #7)
+
+Pow(x, n) (LeetCode #50)
+
+Divide Two Integers (LeetCode #29)
+Number of Provinces (LeetCode #547) – Detect connected components.
+
+Redundant Connection (LeetCode #684) – Classic Union-Find problem.
+
+Accounts Merge (LeetCode #721) – Used in Nutanix interviews.
+
+Most Stones Removed with Same Row or Column (LeetCode #947)
+
+Graph Valid Tree (LeetCode #261) – Check for cycles using DSU.
+
+📌 10. Matrix & Grid Problems (10 Questions)
+Rotate Image (LeetCode #48) – Common in Nutanix coding rounds.
+
+Set Matrix Zeroes (LeetCode #73)
+
+Spiral Matrix (LeetCode #54)
+
+Search a 2D Matrix (LeetCode #74)
+
+Word Search (LeetCode #79) – Backtracking + Matrix.
+
+Sudoku Solver (LeetCode #37) – Hard backtracking problem.
+
+Game of Life (LeetCode #289) – In-place modification.
+
+Max Area of Island (LeetCode #695) – Matrix DFS.
+
+01 Matrix (LeetCode #542) – BFS on grid.
+
+Kth Smallest Element in a Sorted Matrix (LeetCode #378)
+
+📌 11. Sliding Window (10 Questions)
+Longest Substring Without Repeating Characters (LeetCode #3)
+
+Minimum Window Substring (LeetCode #76) – Hard but frequent.
+
+Sliding Window Maximum (LeetCode #239) – Monotonic queue.
+
+Longest Repeating Character Replacement (LeetCode #424)
+
+Permutation in String (LeetCode #567)
+
+Fruit Into Baskets (LeetCode #904)
+
+Maximum Points You Can Obtain from Cards (LeetCode #1423)
+
+Subarrays with K Different Integers (LeetCode #992)
+
+Find All Anagrams in a String (LeetCode #438)
+
+Minimum Size Subarray Sum (LeetCode #209)
+
+📌 12. Backtracking & Recursion (10 Questions)
+Subsets (LeetCode #78)
+
+Combination Sum (LeetCode #39)
+
+Permutations (LeetCode #46)
+
+N-Queens (LeetCode #51) – Asked in Nutanix onsite.
+
+Generate Parentheses (LeetCode #22)
+
+Word Search II (LeetCode #212) – Trie + Backtracking.
+
+Palindrome Partitioning (LeetCode #131)
+
+Sudoku Solver (LeetCode #37)
+
+Letter Combinations of a Phone Number (LeetCode #17)
+
+Restore IP Addresses (LeetCode #93)
+
+📌 13. Greedy Algorithms (5 Questions)
+Jump Game (LeetCode #55)
+
+Jump Game II (LeetCode #45)
+
+Gas Station (LeetCode #134)
+
+Minimum Number of Arrows to Burst Balloons (LeetCode #452)
+
+Task Scheduler (LeetCode #621)
+
+📌 14. Bit Manipulation (5 Questions)
+Single Number II (LeetCode #137)
+
+Divide Two Integers (LeetCode #29)
+
+Sum of Two Integers (LeetCode #371)
+
+Counting Bits (LeetCode #338)
+
+Maximum XOR of Two Numbers in an Array (LeetCode #421)
+
+📌 15. Advanced Data Structures (5 Questions)
+Range Sum Query 2D – Immutable (LeetCode #304)
+
+Count of Smaller Numbers After Self (LeetCode #315) – Segment Tree/Fenwick Tree.
+
+My Calendar I (LeetCode #729) – Binary Search Tree.
+
+Data Stream as Disjoint Intervals (LeetCode #352)
+
+Design In-Memory File System (LeetCode #588) – System design + Trie.
