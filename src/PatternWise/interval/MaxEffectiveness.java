@@ -1,3 +1,5 @@
+package PatternWise.interval;
+
 import java.util.Arrays;
 
 class Interval {
@@ -19,22 +21,22 @@ public class MaxEffectiveness {
         Arrays.sort(intervals, (a, b) -> Integer.compare(a.endTime, b.endTime));
 
         int n = intervals.length;
-        
+
         // Step 2: DP array to store the maximum effectiveness up to each interval
         int[] dp = new int[n];
-        
+
         // Step 3: Initialize the DP array
-        dp[0] = intervals[0].effectiveness;  // The first interval's effectiveness
-        
+        dp[0] = intervals[0].effectiveness; // The first interval's effectiveness
+
         // Step 4: Calculate dp values for each interval
         for (int i = 1; i < n; i++) {
             // Option 1: Exclude the current interval
-            dp[i] = Math.max(dp[i], dp[i-1]);
+            dp[i] = Math.max(dp[i], dp[i - 1]);
 
             // Option 2: Include the current interval
             // Find the last non-overlapping interval
             int lastNonOverlap = binarySearch(intervals, i);
-            
+
             // If there's a valid non-overlapping interval, include the current interval
             if (lastNonOverlap != -1) {
                 dp[i] = Math.max(dp[i], dp[lastNonOverlap] + intervals[i].effectiveness);
@@ -47,7 +49,8 @@ public class MaxEffectiveness {
         return dp[n - 1];
     }
 
-    // Binary search to find the last interval that ends before intervals[i].startTime
+    // Binary search to find the last interval that ends before
+    // intervals[i].startTime
     public static int binarySearch(Interval[] intervals, int currentIndex) {
         int left = 0, right = currentIndex - 1;
         int targetStartTime = intervals[currentIndex].startTime;
@@ -69,12 +72,12 @@ public class MaxEffectiveness {
     public static void main(String[] args) {
         // Example input
         Interval[] intervals = {
-            new Interval(1, 1, 2, 50),
-            new Interval(2, 3, 5, 50),
-            new Interval(3, 6, 8, 100),
-            new Interval(4, 2, 100, 200)
+                new Interval(1, 1, 2, 50),
+                new Interval(2, 3, 5, 50),
+                new Interval(3, 6, 8, 100),
+                new Interval(4, 2, 100, 200)
         };
-        
+
         // Find and print the result
         int result = maxEffectiveness(intervals);
         System.out.println("Maximum effectiveness of non-overlapping intervals: " + result);

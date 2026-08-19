@@ -1,0 +1,77 @@
+Customers trigger scans of their data warehouses through our API. A full scan can take 6–12 hours and consists of multiple phases: 
+1. schema sync, 
+2. privilege sync,
+3. column classification, and 
+4. post-scan aggregation. 
+
+The first three stages involve running queries against the live data warehouse. Schema sync pulls information about what the structure of the data warehouse is, and column classification inspects individual tables and columns.
+
+At any point, a user can click 'abort scan' in our UI. 
+
+Design the cancellation mechanism end-to-end: how the abort signal propagates, what happens to in-flight work at each phase, what partial state is kept vs. discarded, and how you handle the case where the abort itself appears to hang — e.g., a sampling query that the warehouse won't cancel.
+
+
+
+
+
+
+Discovery ( read file from Warehouse) -> Inventory DB. (File -> State (Discovered))
+
+Fingerprint DB ( file Hash -> Previusly scanned or not )
+
+Scheduler 
+
+State :
+
+INPROCESS 
+DONE
+
+START
+CANCELLED 
+
+OUTBOX ( tenantID , FingerprintId, objectId, INPROCESS/DONE , IS_CANCELLED)
+
+ scan_cancelled (fi)
+
+----------
+
+You're building a multi-tenant SaaS application in the data-security space. The system's job is to ingest and store sensitive metadata about customers' data: which tables contain PII, which users have excessive privileges, which storage buckets are public. 
+
+Design the tenant isolation strategy. Cover: the database topology (shared schema vs. schema-per-tenant vs. catalog-per-tenant, and how you decide), encryption and key management, tenant deletion (a customer churns or invokes GDPR erasure — trace where their data actually lives), and operational access — how do your own engineers debug a production issue for tenant X without becoming a security hole themselves? 
+
+Go over performance benefits and drawbacks, and whether we're concerned about noisy neighbors, 
+
+
+
+partitions: might optimize slightly for cost/performance but negative from security, compliance
+
+
+mutitenant DB 
+schema per tenant
+
+Auth layer:{JWT }
+
+
+Prod access: tenant ID key, 
+
+
+
+
+Schema(tenant){
+  objectid, cred_id
+
+}
+
+
+
+Instance ( Credential  store ( per tenant)){
+  cred_id (---)
+}
+
+
+DB {
+  tenant 
+  retention : 7d 
+}
+
+deletion: track all resources created for customer when creating, walk back through & clear everything to offboard

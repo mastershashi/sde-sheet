@@ -58,7 +58,7 @@ public class ParallelMergeSort extends RecursiveTask<Void> {
     }
 
     public static void main(String[] args) {
-        int[] array = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
+        int[] array = { 3, 1, 4, 1, 5, 9, 2, 6, 5, 3 };
         ForkJoinPool pool = new ForkJoinPool();
         pool.invoke(new ParallelMergeSort(array, 0, array.length));
 

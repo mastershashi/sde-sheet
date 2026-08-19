@@ -1,7 +1,5 @@
 package PatternWise.SlidingWindow.VariableSize;
 
-import java.util.*;
-
 public class VariableSizeSlidingWindow {
 
     /*
@@ -14,14 +12,14 @@ public class VariableSizeSlidingWindow {
      *
      * int left = 0;
      * for (int right = 0; right < n; right++) {
-     *     add right element into window state;
+     * add right element into window state;
      *
-     *     while (window is invalid) {
-     *         remove left element from state;
-     *         left++;
-     *     }
+     * while (window is invalid) {
+     * remove left element from state;
+     * left++;
+     * }
      *
-     *     update answer with valid window [left..right];
+     * update answer with valid window [left..right];
      * }
      *
      * WHAT DIFFERS PER VARIANT:
@@ -32,19 +30,19 @@ public class VariableSizeSlidingWindow {
      *
      * TOP LC VARIANTS:
      * - LC 3. Longest Substring Without Repeating Characters
-     *   Companies: Amazon, Google, Microsoft, Facebook/Meta, Apple,
-     *   Bloomberg, Adobe, Uber
+     * Companies: Amazon, Google, Microsoft, Facebook/Meta, Apple,
+     * Bloomberg, Adobe, Uber
      * - LC 209. Minimum Size Subarray Sum
-     *   Companies: Amazon, Apple, Bloomberg, ByteDance, Facebook/Meta,
-     *   Google, Microsoft, Oracle
+     * Companies: Amazon, Apple, Bloomberg, ByteDance, Facebook/Meta,
+     * Google, Microsoft, Oracle
      * - LC 713. Subarray Product Less Than K
-     *   Companies: Amazon, Google, Microsoft, Facebook/Meta
+     * Companies: Amazon, Google, Microsoft, Facebook/Meta
      * - LC 1004. Max Consecutive Ones III
-     *   Companies: Amazon, Facebook/Meta, Microsoft, Yandex
+     * Companies: Amazon, Facebook/Meta, Microsoft, Yandex
      * - LC 1208. Get Equal Substrings Within Budget
-     *   Companies: Google, Amazon, Microsoft
+     * Companies: Google, Amazon, Microsoft
      * - LC 487. Max Consecutive Ones II
-     *   Companies: Google
+     * Companies: Google
      * ============================================================
      */
 
@@ -80,7 +78,7 @@ public class VariableSizeSlidingWindow {
      * Variation: minimize valid window after reaching target
      * - LC 209. Minimum Size Subarray Sum
      * - Companies: Amazon, Apple, Bloomberg, ByteDance, Facebook/Meta,
-     *   Google, Microsoft, Oracle
+     * Google, Microsoft, Oracle
      * - Time: O(n) for positive nums
      * - Space: O(1)
      * ------------------------------------------------------------
@@ -106,7 +104,7 @@ public class VariableSizeSlidingWindow {
      * Variation: shrink while current character is duplicated
      * - LC 3. Longest Substring Without Repeating Characters
      * - Companies: Amazon, Google, Microsoft, Facebook/Meta, Apple,
-     *   Bloomberg, Adobe, Uber
+     * Bloomberg, Adobe, Uber
      * - Time: O(n)
      * - Space: O(1), ASCII/charset bounded
      * ------------------------------------------------------------
