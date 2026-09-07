@@ -1,9 +1,14 @@
 package PatternWise.Tree.LCAPattern;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.w3c.dom.Node;
 
 public class LCAPatterns {
-
+    private int count = 0;
     /*
      * ============================================================
      * 🔥 CORE TEMPLATE: LCA (Binary Tree)
@@ -37,7 +42,8 @@ public class LCAPatterns {
 
     static class TreeNode {
         int val;
-        TreeNode left, right;
+        TreeNode left, right, parent;
+        
 
         TreeNode(int val) {
             this.val = val;
@@ -66,6 +72,49 @@ public class LCAPatterns {
             return root;
 
         return left != null ? left : right;
+    }
+
+    /**
+     * IN LCA of BInary tree , it is not guaranteed that p and q will always be
+     * present
+     */
+    public TreeNode lcaBinaryTree2(TreeNode root, TreeNode p, TreeNode q) {
+
+        TreeNode ans = dfs(root, p, q);
+        return count == 2 ? ans : null;
+
+    }
+    // part of lcbinarytree2
+    public TreeNode dfs(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) {
+            return null;
+        }
+        TreeNode left = dfs(root.left, p, q);
+        TreeNode right = dfs(root.right, p, q);
+
+        if (root == p || root == q) {
+            count++;
+            return root;
+        }
+        if (left != null && right != null)
+            return root;
+
+        return left != null ? left : right;
+    }
+    /**
+     * LCA of Binary tree 3
+     * here root is not necesaarily present bt every node will have a parent 
+     * p and q must exists
+     * this is simialr to linked list intersection
+     */
+    public TreeNode lcaBinaryTree3(TreeNode p, TreeNode q){
+        TreeNode a = p;
+        TreeNode b = q;
+        while(a != b){
+            a = a != null ? a.parent : p;
+            b = b != null ? b.parent : q;
+        }
+        return a;
     }
 
     /*
@@ -129,6 +178,30 @@ public class LCAPatterns {
         return distanceFrom(node.right, target, dist + 1);
     }
 
+    /**
+     * Diamter of Binary tree ( longest distance between any two nodes of a binary tree)
+     */
+    int diameter = 0;
+
+    public int diameterOfBinaryTree(TreeNode root) {
+        height(root);
+        return diameter;
+    }
+
+    int height(TreeNode root) {
+
+        if (root == null)
+            return 0;
+
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+
+        // Diameter passing through current node
+        diameter = Math.max(diameter, leftHeight + rightHeight);
+
+        // Return height to parent
+        return 1 + Math.max(leftHeight, rightHeight);
+    }
     /*
      * // ------------------------------------------------------------
      * // 4. KTH ANCESTOR
@@ -263,5 +336,71 @@ public class LCAPatterns {
         set.add(n7);
         set.add(n4);
         System.out.println("LCA Multiple (7,4): " + sol.lcaMultiple(root, set).val);
+
+        TreeNode root1 = new TreeNode(3);
+
+        TreeNode node5 = new TreeNode(5);
+        TreeNode node1 = new TreeNode(1);
+        TreeNode node6 = new TreeNode(6);
+        TreeNode node2 = new TreeNode(2);
+
+        root1.left = node5;
+        root1.right = node1;
+
+        node5.left = node6;
+        node5.right = node2;
+
+        // -------------------------
+        // Case 1: Both nodes exist
+        // -------------------------
+
+        TreeNode p = node6;
+        TreeNode q = node2;
+
+        TreeNode ans = sol.lcaBinaryTree2(root1, p, q);
+
+        System.out.println("LCA = " + ans.val);
+        // LCA = 5
+
+        // -------------------------
+        // Case 2: One node missing
+        // -------------------------
+
+        TreeNode missing = new TreeNode(99);
+
+        ans = sol.lcaBinaryTree2(root1, node6, missing);
+
+        System.out.println("LCA = " + ans);
+        // LCA = null
+
+        // Pattern 3 
+        TreeNode root2 = new TreeNode(3);
+
+        TreeNode node10 = new TreeNode(5);
+        TreeNode node11 = new TreeNode(1);
+        TreeNode node12 = new TreeNode(6);
+        TreeNode node13 = new TreeNode(2);
+
+        // Tree connections
+        root2.left = node10;
+        root2.right = node11;
+
+        node10.left = node12;
+        node10.right = node13;
+
+        // Parent connections
+        node10.parent = root2;
+        node11.parent = root2;
+
+        node12.parent = node10;
+        node13.parent = node10;
+
+        // Find LCA of 12 and 13
+        TreeNode p1 = node12;
+        TreeNode q1 = node13;
+
+        TreeNode result = sol.lcaBinaryTree3(p1, q1);
+
+        System.out.println("LCA = " + result.val);
     }
 }

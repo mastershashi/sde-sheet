@@ -1,4 +1,3 @@
-
 class RunningSumOf1DArray {
     private int[] runningSum(int[] nums) {
         int prefixSum[] = new int[nums.length];

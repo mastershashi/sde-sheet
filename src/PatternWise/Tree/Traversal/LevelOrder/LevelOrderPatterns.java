@@ -1,6 +1,14 @@
 package PatternWise.Tree.Traversal.LevelOrder;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class LevelOrderPatterns {
 
@@ -71,7 +79,7 @@ public class LevelOrderPatterns {
      * Variation: collect all nodes per level
      * - LC 102. Binary Tree Level Order Traversal
      * - Companies: Amazon, Google, Microsoft, Facebook/Meta, Apple,
-     *   Bloomberg, LinkedIn, Uber
+     * Bloomberg, LinkedIn, Uber
      * - Time: O(n)
      * - Space: O(n)
      * ------------------------------------------------------------
@@ -145,7 +153,7 @@ public class LevelOrderPatterns {
      * Variation: pick last node of each level, i == size - 1
      * - LC 199. Binary Tree Right Side View
      * - Companies: Amazon, Microsoft, Facebook/Meta, Apple, Bloomberg,
-     *   ByteDance, Uber
+     * ByteDance, Uber
      * - Time: O(n)
      * - Space: O(n)
      * ------------------------------------------------------------
@@ -220,7 +228,7 @@ public class LevelOrderPatterns {
      * Variation: stop BFS at depth K
      * - Closest: LC 863. All Nodes Distance K in Binary Tree
      * - Companies: Amazon, Bloomberg, Facebook/Meta, Google, Microsoft,
-     *   Oracle, Uber
+     * Oracle, Uber
      * - Time: O(n)
      * - Space: O(n)
      * ------------------------------------------------------------
@@ -254,6 +262,92 @@ public class LevelOrderPatterns {
             }
             depth++;
         }
+        return res;
+    }
+
+    /**
+     * Variant of K distance , if target is given and k is given and we have to list down all the nodes at k distance from target then we need to traversal in three direction.
+     * convert the tree into graph 
+     * by making a node traveral in three direction 
+     *  node → left
+     *  node → right
+     *  node → parent
+     * 
+     * bild parent pointer using
+     * parent.put(node.left, node);
+     * parent.put(node.right, node);
+     * 
+     * Then start the BFS traversal fropm target 
+     */
+
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
+        List<Integer> res = new ArrayList<>();
+
+        if (root == null || target == null)
+            return res;
+
+        // 1. Build parent pointers
+        Map<TreeNode, TreeNode> parent = new HashMap<>();
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+
+            if (node.left != null) {
+                parent.put(node.left, node);
+                queue.offer(node.left);
+            }
+
+            if (node.right != null) {
+                parent.put(node.right, node);
+                queue.offer(node.right);
+            }
+        }
+
+        // 2. BFS starting from target
+        Set<TreeNode> visited = new HashSet<>();
+        queue.offer(target);
+        visited.add(target);
+
+        int distance = 0;
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+
+            // All nodes currently in queue are exactly distance k
+            if (distance == k) {
+                for (TreeNode node : queue) {
+                    res.add(node.val);
+                }
+                return res;
+            }
+
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+
+                // left
+                if (node.left != null && visited.add(node.left)) {
+                    queue.offer(node.left);
+                }
+
+                // right
+                if (node.right != null && visited.add(node.right)) {
+                    queue.offer(node.right);
+                }
+
+                // parent
+                if (parent.containsKey(node) &&
+                        visited.add(parent.get(node))) {
+
+                    queue.offer(parent.get(node));
+                }
+            }
+
+            distance++;
+        }
+
         return res;
     }
 
